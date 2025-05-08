@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_category_property_form_stock_inherit" model="ir.ui.view">
+            <field name="name">product.category.stock.property.form.inherit.stock.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="stock_account.view_category_property_form_stock"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/field[@name='property_valuation']" position="after">
+                    <field name="global_info"/>
+                    <field name="required_attribute_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+        </record>
+    </data> 
+</odoo>
